@@ -65,11 +65,10 @@ export default function Hero() {
             transition={{ duration: 1.2 }}
             className="bg-[#EAE8E4] w-full h-full rounded-tr-[80px] md:rounded-tr-[120px] overflow-hidden relative group"
            >
-              <img 
-                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=2070" 
-                alt="Modern Architecture" 
+              <img
+                src="/images/hero/featured-project.jpg"
+                alt="Modern Architecture"
                 className="w-full h-full object-cover grayscale brightness-90 group-hover:grayscale-0 transition-all duration-1000"
-                referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
               <div className="absolute bottom-6 left-6 md:bottom-8 md:left-8 text-white">
@@ -80,11 +79,11 @@ export default function Hero() {
            
            <div className="hidden md:grid grid-rows-2 gap-4 h-full min-h-0">
               <div className="bg-[#E2DDD5] rounded-bl-[60px] overflow-hidden relative h-full min-h-0">
-                <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=1000" className="w-full h-full object-cover opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-700" alt="Interior" referrerPolicy="no-referrer" />
+                <img src="/images/hero/interior-design.jpg" className="w-full h-full object-cover opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-700" alt="Interior" />
                 <div className="absolute top-4 left-6 text-[9px] uppercase tracking-widest text-brand-dark/40 font-bold">Interior Design</div>
               </div>
               <div className="bg-brand-border overflow-hidden relative h-full min-h-0">
-                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1000" className="w-full h-full object-cover opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-700" alt="Commercial" referrerPolicy="no-referrer" />
+                <img src="/images/hero/commercial-space.jpg" className="w-full h-full object-cover opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-700" alt="Commercial" />
                 <div className="absolute top-4 left-6 text-[9px] uppercase tracking-widest text-brand-dark/40 font-bold">Commercial Space</div>
               </div>
            </div>
