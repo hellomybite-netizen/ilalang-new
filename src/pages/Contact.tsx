@@ -96,11 +96,11 @@ export default function Contact() {
 
               <div>
                 <h4 className="text-[10px] uppercase tracking-[0.4em] font-bold text-brand-earth mb-6">Social Discovery</h4>
-                <a href="#" className="flex items-center gap-4 group">
+                <a href="https://www.instagram.com/ilalang.architect/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group">
                    <div className="w-10 h-10 bg-brand-dark text-white rounded-full flex items-center justify-center group-hover:bg-brand-earth transition-colors">
                      <Instagram className="w-4 h-4" />
                    </div>
-                   <p className="text-sm font-display font-bold tracking-widest uppercase">@ilalang.arch</p>
+                   <p className="text-sm font-display font-bold tracking-widest uppercase">@ilalang.architect</p>
                 </a>
               </div>
             </motion.div>

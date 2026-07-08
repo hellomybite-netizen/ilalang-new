@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import { Instagram, Facebook, Mail, MapPin, Phone } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -48,9 +47,7 @@ export default function Footer() {
         <div className="md:col-span-3">
           <h4 className="text-[10px] uppercase tracking-[0.3em] font-bold mb-8 text-brand-earth">Digital Presence</h4>
           <div className="flex gap-10 text-[10px] tracking-widest uppercase font-bold">
-            <a href="#" className="opacity-50 hover:opacity-100 transition-opacity">Instagram</a>
-            <a href="#" className="opacity-50 hover:opacity-100 transition-opacity">Behance</a>
-            <a href="#" className="opacity-50 hover:opacity-100 transition-opacity">LinkedIn</a>
+            <a href="https://www.instagram.com/ilalang.architect/" target="_blank" rel="noopener noreferrer" className="opacity-50 hover:opacity-100 transition-opacity">Instagram</a>
           </div>
         </div>
       </div>
