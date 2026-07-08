@@ -5,27 +5,27 @@ import SectionHeading from '../ui/SectionHeading';
 
 const featuredProjects = [
   {
-    id: 1,
-    title: "The Linear House",
-    category: "Residential",
-    image: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=2070",
-    location: "Malang",
+    id: "al-azhar-iibs",
+    title: "Al Azhar IIBS",
+    category: "Educational",
+    image: "/images/portfolio/al-azhar-iibs/01.jpg",
+    location: "Tangerang Selatan",
     gridArea: "lg:col-span-8 lg:row-span-2"
   },
   {
-    id: 2,
-    title: "Oak & Stone Studio",
-    category: "Interior",
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2070",
-    location: "Batu",
+    id: "padel-garden-araya",
+    title: "Padel Garden Araya",
+    category: "Sport",
+    image: "/images/portfolio/padel-garden-araya/01.jpg",
+    location: "Malang",
     gridArea: "lg:col-span-4 lg:row-span-1"
   },
   {
-    id: 3,
-    title: "Urban Loft Branding",
+    id: "reven-leather",
+    title: "Reven Leather",
     category: "Commercial",
-    image: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=2070",
-    location: "Surabaya",
+    image: "/images/portfolio/reven-leather/01.jpg",
+    location: "Malang",
     gridArea: "lg:col-span-4 lg:row-span-1"
   }
 ];
@@ -57,7 +57,7 @@ export default function Showcase() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className={`relative group overflow-hidden ${project.gridArea}`}
+              className={`relative group overflow-hidden aspect-square md:aspect-video lg:aspect-auto ${project.gridArea}`}
             >
               <img 
                 src={project.image} 
@@ -70,7 +70,7 @@ export default function Showcase() {
               <div className="absolute inset-0 p-8 flex flex-col justify-end text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                 <span className="text-[10px] uppercase tracking-[0.3em] font-bold mb-2 block">{project.category} // {project.location}</span>
                 <h3 className="text-3xl font-display font-medium tracking-tight mb-4">{project.title}</h3>
-                <Link to={`/portfolio`} className="flex items-center gap-2 text-[10px] uppercase tracking-widest font-bold">
+                <Link to={`/portfolio/${project.id}`} className="flex items-center gap-2 text-[10px] uppercase tracking-widest font-bold">
                   View Detail <ArrowUpRight className="w-3 h-3" />
                 </Link>
               </div>

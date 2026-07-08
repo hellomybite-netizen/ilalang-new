@@ -70,7 +70,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <p className="text-[10px] uppercase tracking-widest font-bold opacity-40 mb-1">Call Us</p>
-                      <p className="font-display font-medium">+62 812 3456 7890</p>
+                      <p className="font-display font-medium">+62 811-3198-800</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
@@ -88,7 +88,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <p className="text-[10px] uppercase tracking-widest font-bold opacity-40 mb-1">Visit Studio</p>
-                      <p className="font-display font-medium leading-relaxed">Jl. Arsitek No. 12 Malang, East Java, Indonesia</p>
+                      <p className="font-display font-medium leading-relaxed">Jl. Simpang Pandan Arum No.1, Jatimulyo, Kec. Lowokwaru, Kota Malang, Jawa Timur 65141</p>
                     </div>
                   </div>
                 </div>

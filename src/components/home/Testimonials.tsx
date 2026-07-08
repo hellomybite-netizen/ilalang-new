@@ -41,8 +41,8 @@ export default function Testimonials() {
               transition={{ delay: index * 0.2 }}
               className="relative pl-12 border-l border-brand-earth/30"
             >
-              <span className="serif text-6xl text-brand-earth absolute -top-4 -left-6 opacity-40">“</span>
-              <p className="text-xl md:text-2xl serif italic font-light mb-6 leading-relaxed opacity-90">
+              <span className="font-sans text-6xl text-brand-earth absolute -top-4 -left-6 opacity-40">“</span>
+              <p className="text-xl md:text-2xl font-sans font-light mb-6 leading-relaxed opacity-90">
                 {t.quote}
               </p>
               <div>

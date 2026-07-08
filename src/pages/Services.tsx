@@ -94,7 +94,7 @@ export default function Services() {
           <div className="flex flex-col md:flex-row justify-between items-start gap-12 mb-24">
             <h2 className="text-5xl md:text-7xl font-display font-medium tracking-tighter leading-tight max-w-xl">
               From First Sketch <br />
-              <span className="serif italic font-light opacity-60 text-brand-earth">To Final Execution</span>
+              <span className="font-sans font-light opacity-60 text-brand-earth">To Final Execution</span>
             </h2>
             <div className="md:max-w-xs pt-4">
               <p className="text-sm opacity-60 leading-relaxed uppercase tracking-widest font-medium">

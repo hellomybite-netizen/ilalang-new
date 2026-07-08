@@ -37,13 +37,8 @@ export default function Navbar() {
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <Link to="/" className="flex items-baseline gap-2 group">
-          <span className="text-2xl font-bold tracking-tighter uppercase transition-colors group-hover:text-brand-earth">
-            ILALANG.
-          </span>
-          <span className="text-[10px] uppercase tracking-[0.4em] font-semibold text-brand-earth">
-            Architect
-          </span>
+        <Link to="/" className="flex items-center gap-3 group">
+          <img src="/logo.png" alt="Ilalang Architect" className="h-8 md:h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105" />
         </Link>
 
         {/* Desktop Nav */}

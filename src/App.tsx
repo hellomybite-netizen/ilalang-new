@@ -4,6 +4,7 @@ import Layout from './components/layout/Layout';
 // Pages
 import Home from './pages/Home';
 import Portfolio from './pages/Portfolio';
+import ProjectDetail from './pages/ProjectDetail';
 import Services from './pages/Services';
 import Inspiration from './pages/Inspiration';
 import About from './pages/About';
@@ -16,6 +17,7 @@ export default function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="portfolio" element={<Portfolio />} />
+          <Route path="portfolio/:id" element={<ProjectDetail />} />
           <Route path="services" element={<Services />} />
           <Route path="inspiration" element={<Inspiration />} />
           <Route path="about" element={<About />} />

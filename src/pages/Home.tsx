@@ -27,7 +27,7 @@ export default function Home() {
             </span>
             <h2 className="text-5xl md:text-7xl font-display font-medium tracking-tighter mb-12">
               Start Your Project <br />
-              <span className="serif italic font-light opacity-60">With Ilalang Today</span>
+              <span className="font-sans font-light opacity-60">With Ilalang Today</span>
             </h2>
             <Link 
               to="/contact"

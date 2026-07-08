@@ -9,13 +9,8 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-16 mb-24">
         {/* Brand Col */}
         <div className="md:col-span-4">
-          <Link to="/" className="flex items-baseline gap-2 mb-8">
-            <span className="text-2xl font-bold tracking-tighter uppercase transition-colors hover:text-brand-earth">
-              ILALANG.
-            </span>
-            <span className="text-[10px] uppercase tracking-[0.4em] font-semibold text-brand-earth">
-              Architect
-            </span>
+          <Link to="/" className="flex items-center gap-3 mb-8 group">
+            <img src="/logo.png" alt="Ilalang Architect" className="h-8 md:h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105" />
           </Link>
           <p className="text-sm opacity-60 leading-relaxed max-w-xs mb-10">
             Designing spaces that harmonize character, light, and function. Based in Malang, serving excellence nationwide.
@@ -43,8 +38,8 @@ export default function Footer() {
         <div className="md:col-span-3">
           <h4 className="text-[10px] uppercase tracking-[0.3em] font-bold mb-8 text-brand-earth">Contact Information</h4>
           <ul className="flex flex-col gap-4 text-[11px] font-bold opacity-60 tracking-widest uppercase">
-            <li>Jl. Arsitek No. 12<br />Malang, East Java</li>
-            <li>+62 812 3456 7890</li>
+            <li>Jl. Simpang Pandan Arum No.1<br />Jatimulyo, Kec. Lowokwaru<br />Kota Malang, Jawa Timur 65141</li>
+            <li>+62 811-3198-800</li>
             <li>hello@ilalangarch.com</li>
           </ul>
         </div>

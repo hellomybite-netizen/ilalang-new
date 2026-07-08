@@ -120,7 +120,7 @@ export default function CostCalculator() {
             </div>
 
             <a 
-              href={`https://wa.me/6281234567890?text=Halo Ilalang Architect, saya baru saja menggunakan kalkulator estimasi untuk jasa ${service} di ${location} dengan luas ${area}m2. Ingin konsultasi lebih lanjut.`}
+              href={`https://wa.me/628113198800?text=Halo Ilalang Architect, saya baru saja menggunakan kalkulator estimasi untuk jasa ${service} di ${location} dengan luas ${area}m2. Ingin konsultasi lebih lanjut.`}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-between w-full px-8 py-5 bg-brand-dark text-white text-[10px] uppercase tracking-[0.2em] font-bold hover:bg-brand-earth transition-all group"

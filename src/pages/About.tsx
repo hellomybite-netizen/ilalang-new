@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import SectionHeading from '../components/ui/SectionHeading';
+import Team from '../components/about/Team';
 
 export default function About() {
   return (
@@ -19,7 +20,7 @@ export default function About() {
               <p>
                 We don't just build structures; we curate experiences. By playing with natural light, raw materials, and the dance of shadows, we create environments that breathe and resonate with their inhabitants.
               </p>
-              <blockquote className="border-l-2 border-brand-earth pl-8 py-4 my-10 italic serif text-2xl text-brand-dark/90">
+              <blockquote className="border-l-2 border-brand-earth pl-8 py-4 my-10 font-sans font-light text-2xl text-brand-dark/90">
                 “Setiap ruang punya cerita, kami merancang dengan karakter, cahaya, dan fungsi.”
               </blockquote>
             </div>
@@ -68,6 +69,8 @@ export default function About() {
         </div>
       </section>
       
+      <Team />
+
       {/* Team Invitation */}
       <section className="py-32 bg-brand-beige border-y border-brand-earth/10">
         <div className="max-w-3xl mx-auto text-center px-6">
