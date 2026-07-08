@@ -8,7 +8,7 @@ const featuredProjects = [
     id: "al-azhar-iibs",
     title: "Al Azhar IIBS",
     category: "Educational",
-    image: "/images/showcase/al-azhar-iibs-mosque.jpg",
+    image: "/images/showcase/al-azhar-iibs-building.jpg",
     location: "Tangerang Selatan",
     gridArea: "lg:col-span-8 lg:row-span-2"
   },
@@ -16,7 +16,7 @@ const featuredProjects = [
     id: "padel-garden-araya",
     title: "Padel Garden Araya",
     category: "Sport",
-    image: "/images/portfolio/padel-garden-araya/01.jpg",
+    image: "/images/showcase/padel-garden-locker.jpg",
     location: "Malang",
     gridArea: "lg:col-span-4 lg:row-span-1"
   },
@@ -24,7 +24,7 @@ const featuredProjects = [
     id: "reven-leather",
     title: "Reven Leather",
     category: "Commercial",
-    image: "/images/portfolio/reven-leather/01.jpg",
+    image: "/images/showcase/reven-leather-house.jpg",
     location: "Malang",
     gridArea: "lg:col-span-4 lg:row-span-1"
   }
