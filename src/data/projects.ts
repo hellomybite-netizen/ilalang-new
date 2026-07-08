@@ -35,7 +35,13 @@ export const projects: Project[] = [
     gallery: [
       "/images/portfolio/al-azhar-iibs/01.jpg",
       "/images/portfolio/al-azhar-iibs/02.jpg",
-      "/images/portfolio/al-azhar-iibs/03.jpg"
+      "/images/portfolio/al-azhar-iibs/03.jpg",
+      "/images/portfolio/al-azhar-iibs/04.jpg",
+      "/images/portfolio/al-azhar-iibs/05.jpg",
+      "/images/portfolio/al-azhar-iibs/06.jpg",
+      "/images/portfolio/al-azhar-iibs/07.jpg",
+      "/images/portfolio/al-azhar-iibs/08.jpg",
+      "/images/portfolio/al-azhar-iibs/09.jpg"
     ]
   },
   {
