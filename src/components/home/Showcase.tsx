@@ -8,7 +8,7 @@ const featuredProjects = [
     id: "al-azhar-iibs",
     title: "Al Azhar IIBS",
     category: "Educational",
-    image: "/images/portfolio/al-azhar-iibs/01.jpg",
+    image: "/images/showcase/al-azhar-iibs-mosque.jpg",
     location: "Tangerang Selatan",
     gridArea: "lg:col-span-8 lg:row-span-2"
   },
