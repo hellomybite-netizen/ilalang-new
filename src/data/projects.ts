@@ -21,7 +21,8 @@ export const projects: Project[] = [
     gallery: [
       "/images/portfolio/insan-cendikia-madani/01.jpg",
       "/images/portfolio/insan-cendikia-madani/02.jpg",
-      "/images/portfolio/insan-cendikia-madani/03.jpg"
+      "/images/portfolio/insan-cendikia-madani/03.jpg",
+      "/images/portfolio/insan-cendikia-madani/04.jpg"
     ]
   },
   {
