@@ -10,6 +10,7 @@ import Inspiration from './pages/Inspiration';
 import ArticleDetail from './pages/ArticleDetail';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import LuxuryHouseArchitect from './pages/LuxuryHouseArchitect';
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
           <Route path="inspiration/:id" element={<ArticleDetail />} />
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="arsitek-rumah-mewah" element={<LuxuryHouseArchitect />} />
         </Route>
       </Routes>
     </Router>

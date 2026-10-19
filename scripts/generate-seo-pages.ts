@@ -124,6 +124,77 @@ const staticPages: PageDefinition[] = [
       breadcrumbs([{ name: 'Beranda', path: '/' }, { name: 'Kontak', path: '/contact' }]),
     ],
   },
+  {
+    path: '/arsitek-rumah-mewah',
+    title: 'Arsitek Rumah Mewah | Desain Eksklusif Ilalang',
+    description: 'Jasa arsitek rumah mewah untuk hunian personal, nyaman, dan sesuai iklim tropis. Dari konsep, interior, hingga design & build. Konsultasi sekarang.',
+    image: '/images/portfolio/geoffry-residence-malang/01.jpg',
+    priority: 1,
+    changefreq: 'monthly',
+    schemas: [
+      organizationSchema,
+      {
+        '@context': 'https://schema.org',
+        '@type': 'Service',
+        name: 'Jasa Arsitek Rumah Mewah',
+        serviceType: 'Desain arsitektur rumah mewah',
+        provider: { '@id': `${SITE_URL}/#organization` },
+        areaServed: { '@type': 'Country', name: 'Indonesia' },
+        url: `${SITE_URL}/arsitek-rumah-mewah`,
+        description: 'Layanan desain arsitektur rumah mewah yang personal, responsif terhadap iklim tropis, dan terarah dari konsep hingga pelaksanaan.',
+      },
+      {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'Apakah Ilalang Architect hanya melayani proyek di Malang?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Tidak. Studio kami berbasis di Malang dan melayani perencanaan proyek di berbagai kota di Indonesia. Alur koordinasi akan disesuaikan dengan lokasi dan kebutuhan proyek.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Apakah bisa mulai dari lahan kosong?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Bisa. Tahap awal justru ideal untuk membaca potensi tapak, orientasi matahari, akses, kebutuhan ruang, dan batasan yang perlu diperhitungkan sejak konsep.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Apakah layanan dapat mencakup interior dan pelaksanaan?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Ya. Selain desain arsitektur, Ilalang menyediakan layanan desain interior dan design & build. Ruang lingkupnya akan ditentukan sesuai kebutuhan proyek Anda.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Apa yang perlu disiapkan sebelum konsultasi?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Cukup siapkan lokasi dan perkiraan ukuran lahan, kebutuhan ruang, referensi suasana yang disukai, serta kisaran anggaran bila sudah ada. Tim kami akan membantu menyusun langkah berikutnya.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Berapa biaya jasa arsitek rumah mewah?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Biaya bergantung pada luas, kompleksitas, lokasi, serta ruang lingkup layanan. Setelah kebutuhan awal dipahami, tim kami dapat menjelaskan lingkup kerja dan estimasi yang relevan secara transparan.',
+            },
+          },
+        ],
+      },
+      breadcrumbs([
+        { name: 'Beranda', path: '/' },
+        { name: 'Arsitek Rumah Mewah', path: '/arsitek-rumah-mewah' },
+      ]),
+    ],
+  },
 ];
 
 const projectPages: PageDefinition[] = projects.map((project) => {
