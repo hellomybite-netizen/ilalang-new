@@ -5,7 +5,8 @@ import { useLocation } from 'react-router-dom';
 export default function WhatsAppButton() {
   const location = useLocation();
   const whatsappNumber = '628113198800';
-  const isLuxuryHouseLanding = location.pathname === '/arsitek-rumah-mewah';
+  const normalizedPath = location.pathname.replace(/\/+$/, '') || '/';
+  const isLuxuryHouseLanding = normalizedPath === '/arsitek-rumah-mewah';
   const message = encodeURIComponent(
     isLuxuryHouseLanding
       ? 'Halo Ilalang Architect, saya tertarik konsultasi desain rumah mewah. Lokasi proyek saya di ... dan luas lahannya sekitar ... m².'
@@ -21,13 +22,13 @@ export default function WhatsAppButton() {
     browserWindow.dataLayer?.push({
       event: 'generate_lead',
       lead_method: 'whatsapp',
-      landing_page: isLuxuryHouseLanding ? 'arsitek_rumah_mewah' : location.pathname,
+      landing_page: isLuxuryHouseLanding ? 'arsitek_rumah_mewah' : normalizedPath,
       cta_position: 'floating',
     });
   };
 
   return (
-    <div className="fixed bottom-6 right-6 flex flex-col items-end gap-3 z-[60] pointer-events-none md:bottom-12 md:right-12">
+    <div className={`fixed bottom-6 right-6 flex-col items-end gap-3 z-[60] pointer-events-none md:bottom-12 md:right-12 ${isLuxuryHouseLanding ? 'hidden md:flex' : 'flex'}`}>
       <motion.div 
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
