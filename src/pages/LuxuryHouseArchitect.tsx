@@ -13,6 +13,7 @@ import {
 import { Link } from 'react-router-dom';
 import Seo, { breadcrumbSchema, organizationSchema } from '../components/seo/Seo';
 import { projects } from '../data/projects';
+import { trackWhatsAppLead } from '../lib/analytics';
 
 const PAGE_PATH = '/arsitek-rumah-mewah';
 const WHATSAPP_NUMBER = '628113198800';
@@ -163,24 +164,10 @@ const landingSchemas = [
 ];
 
 function trackWhatsAppClick(position: string) {
-  const browserWindow = window as Window & {
-    dataLayer?: Array<Record<string, unknown>>;
-    gtag?: (
-      command: 'event',
-      eventName: 'conversion',
-      parameters: { send_to: string },
-    ) => void;
-  };
-
-  browserWindow.dataLayer?.push({
-    event: 'generate_lead',
-    lead_method: 'whatsapp',
-    landing_page: 'arsitek_rumah_mewah',
-    cta_position: position,
-  });
-
-  browserWindow.gtag?.('event', 'conversion', {
-    send_to: 'AW-17725475846/cahoCNq-uKIdEIaYlYRC',
+  trackWhatsAppLead({
+    landingPage: 'arsitek_rumah_mewah',
+    ctaPosition: position,
+    includeGoogleAdsConversion: true,
   });
 }
 

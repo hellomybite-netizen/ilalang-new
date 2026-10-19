@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { MessageCircle } from 'lucide-react';
 import { useLocation } from 'react-router-dom';
+import { trackWhatsAppLead } from '../../lib/analytics';
 
 export default function WhatsAppButton() {
   const location = useLocation();
@@ -15,15 +16,10 @@ export default function WhatsAppButton() {
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
 
   const trackClick = () => {
-    const browserWindow = window as Window & {
-      dataLayer?: Array<Record<string, unknown>>;
-    };
-
-    browserWindow.dataLayer?.push({
-      event: 'generate_lead',
-      lead_method: 'whatsapp',
-      landing_page: isLuxuryHouseLanding ? 'arsitek_rumah_mewah' : normalizedPath,
-      cta_position: 'floating',
+    trackWhatsAppLead({
+      landingPage: isLuxuryHouseLanding ? 'arsitek_rumah_mewah' : normalizedPath,
+      ctaPosition: 'floating',
+      includeGoogleAdsConversion: isLuxuryHouseLanding,
     });
   };
 

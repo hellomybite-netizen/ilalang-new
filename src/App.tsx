@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/layout/Layout';
+import MetaPixelTracker from './components/analytics/MetaPixelTracker';
 
 // Pages
 import Home from './pages/Home';
@@ -15,6 +16,7 @@ import LuxuryHouseArchitect from './pages/LuxuryHouseArchitect';
 export default function App() {
   return (
     <Router>
+      <MetaPixelTracker />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
