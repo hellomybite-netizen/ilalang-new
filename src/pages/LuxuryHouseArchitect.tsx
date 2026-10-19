@@ -198,7 +198,7 @@ function WhatsAppCta({ position, inverse = false }: { position: string; inverse?
 
 export default function LuxuryHouseArchitect() {
   return (
-    <div className="bg-brand-beige pb-24">
+    <div className="bg-brand-beige pb-16 md:pb-24">
       <Seo
         title="Arsitek Rumah Mewah | Desain Eksklusif Ilalang"
         description="Jasa arsitek rumah mewah untuk hunian personal, nyaman, dan sesuai iklim tropis. Dari konsep, interior, hingga design & build. Konsultasi sekarang."
@@ -207,7 +207,7 @@ export default function LuxuryHouseArchitect() {
         structuredData={landingSchemas}
       />
 
-      <section className="relative overflow-hidden px-6 pb-20 pt-6 md:px-12 md:pb-28">
+      <section className="relative overflow-hidden px-6 pb-12 pt-6 md:px-12 md:pb-28">
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-16">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
@@ -253,7 +253,7 @@ export default function LuxuryHouseArchitect() {
             transition={{ duration: 0.9, delay: 0.1 }}
             className="relative lg:col-span-6"
           >
-            <div className="relative aspect-[4/5] overflow-hidden rounded-tr-[100px] bg-brand-border md:aspect-[5/4] lg:aspect-[4/5]">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-tr-[72px] bg-brand-border md:aspect-[5/4] md:rounded-tr-[100px] lg:aspect-[4/5]">
               <img
                 src="/images/portfolio/geoffry-residence-malang/01.jpg"
                 alt="Desain rumah mewah tropis kontemporer karya Ilalang Architect"
@@ -268,7 +268,7 @@ export default function LuxuryHouseArchitect() {
                 <p className="mt-2 max-w-sm text-xs leading-5 text-white/70">Contemporary Tropical dengan courtyard sebagai titik fokus hijau.</p>
               </div>
             </div>
-            <div className="absolute -bottom-7 -left-4 max-w-[220px] bg-white p-5 shadow-xl md:-left-10 md:p-7">
+            <div className="absolute -bottom-7 -left-4 hidden max-w-[220px] bg-white p-5 shadow-xl md:block md:-left-10 md:p-7">
               <p className="text-[9px] font-bold uppercase tracking-[0.25em] text-brand-earth">Better Design, Better Value</p>
               <p className="mt-3 text-sm leading-6 text-brand-dark/70">Keindahan, kenyamanan, dan keterbangunan dipikirkan sebagai satu kesatuan.</p>
             </div>
@@ -276,7 +276,7 @@ export default function LuxuryHouseArchitect() {
         </div>
       </section>
 
-      <section className="border-y border-brand-border bg-white px-6 py-7 md:px-12">
+      <section className="border-y border-brand-border bg-white px-6 py-5 md:px-12 md:py-7">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-4 text-center text-[10px] font-bold uppercase tracking-[0.2em] text-brand-dark/55 md:flex-row md:gap-12">
           <span>Studio berbasis di Malang</span>
           <span className="hidden h-1 w-1 rounded-full bg-brand-earth md:block" />
@@ -286,7 +286,7 @@ export default function LuxuryHouseArchitect() {
         </div>
       </section>
 
-      <section className="px-6 py-24 md:px-12 md:py-32">
+      <section className="hidden px-6 py-24 md:block md:px-12 md:py-32">
         <div className="mx-auto grid max-w-7xl grid-cols-1 gap-14 lg:grid-cols-12 lg:gap-20">
           <div className="lg:col-span-5">
             <span className="mb-5 block text-[10px] font-bold uppercase tracking-[0.32em] text-brand-earth">Bukan Sekadar Fasad</span>
@@ -315,11 +315,11 @@ export default function LuxuryHouseArchitect() {
         </div>
       </section>
 
-      <section className="bg-brand-dark px-6 py-24 text-brand-beige md:px-12 md:py-32">
+      <section className="bg-brand-dark px-6 py-16 text-brand-beige md:px-12 md:py-32">
         <div className="mx-auto max-w-7xl">
-          <div className="mb-16 max-w-3xl">
+          <div className="mb-10 max-w-3xl md:mb-16">
             <span className="mb-5 block text-[10px] font-bold uppercase tracking-[0.32em] text-brand-earth">Pendekatan Ilalang</span>
-            <h2 className="text-4xl font-medium leading-tight tracking-tight text-brand-beige md:text-6xl">
+            <h2 className="text-3xl font-medium leading-tight tracking-tight text-brand-beige md:text-6xl">
               Karakter, cahaya, dan fungsi dalam satu bahasa desain.
             </h2>
           </div>
@@ -333,11 +333,11 @@ export default function LuxuryHouseArchitect() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="bg-brand-dark p-8 md:p-10"
+                  className="bg-brand-dark p-6 md:p-10"
                 >
-                  <Icon className="mb-9 h-8 w-8 text-brand-earth" />
-                  <h3 className="text-2xl font-medium text-brand-beige">{principle.title}</h3>
-                  <p className="mt-4 text-sm leading-7 text-brand-beige/55">{principle.description}</p>
+                  <Icon className="mb-5 h-7 w-7 text-brand-earth md:mb-9 md:h-8 md:w-8" />
+                  <h3 className="text-xl font-medium text-brand-beige md:text-2xl">{principle.title}</h3>
+                  <p className="mt-3 text-sm leading-6 text-brand-beige/55 md:mt-4 md:leading-7">{principle.description}</p>
                 </motion.div>
               );
             })}
@@ -345,30 +345,30 @@ export default function LuxuryHouseArchitect() {
         </div>
       </section>
 
-      <section className="bg-white px-6 py-24 md:px-12 md:py-32">
+      <section className="bg-white px-6 py-16 md:px-12 md:py-32">
         <div className="mx-auto max-w-7xl">
-          <div className="mb-16 flex flex-col justify-between gap-8 md:flex-row md:items-end">
+          <div className="mb-10 flex flex-col justify-between gap-6 md:mb-16 md:flex-row md:items-end md:gap-8">
             <div className="max-w-2xl">
               <span className="mb-5 block text-[10px] font-bold uppercase tracking-[0.32em] text-brand-earth">Ruang Lingkup</span>
-              <h2 className="text-4xl font-medium leading-tight tracking-tight md:text-5xl">Satu visi, dijaga dari konsep menuju realisasi.</h2>
+              <h2 className="text-3xl font-medium leading-tight tracking-tight md:text-5xl">Satu visi, dijaga dari konsep menuju realisasi.</h2>
             </div>
-            <p className="max-w-sm text-sm leading-7 text-brand-dark/55">Pilih ruang lingkup yang sesuai. Tim kami akan membantu menyusun tahapan berdasarkan kebutuhan proyek Anda.</p>
+            <p className="hidden max-w-sm text-sm leading-7 text-brand-dark/55 md:block">Pilih ruang lingkup yang sesuai. Tim kami akan membantu menyusun tahapan berdasarkan kebutuhan proyek Anda.</p>
           </div>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
             {services.map((service) => (
-              <div key={service.number} className="border-t border-brand-dark/20 py-8">
-                <span className="text-5xl font-bold text-brand-earth/20">{service.number}</span>
-                <h3 className="mt-6 text-2xl font-medium">{service.title}</h3>
-                <p className="mt-4 text-sm leading-7 text-brand-dark/60">{service.description}</p>
+              <div key={service.number} className="border-t border-brand-dark/20 py-5 md:py-8">
+                <span className="text-3xl font-bold text-brand-earth/20 md:text-5xl">{service.number}</span>
+                <h3 className="mt-3 text-xl font-medium md:mt-6 md:text-2xl">{service.title}</h3>
+                <p className="mt-4 hidden text-sm leading-7 text-brand-dark/60 md:block">{service.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section id="portfolio-rumah" className="scroll-mt-28 px-6 py-24 md:px-12 md:py-32">
+      <section id="portfolio-rumah" className="scroll-mt-28 px-6 py-16 md:px-12 md:py-32">
         <div className="mx-auto max-w-7xl">
-          <div className="mb-16 max-w-3xl">
+          <div className="mb-10 max-w-3xl md:mb-16">
             <span className="mb-5 block text-[10px] font-bold uppercase tracking-[0.32em] text-brand-earth">Selected Residential Works</span>
             <h2 className="text-4xl font-medium leading-tight tracking-tight md:text-5xl">Rumah yang dirancang untuk konteks dan penghuninya.</h2>
           </div>
@@ -380,10 +380,10 @@ export default function LuxuryHouseArchitect() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="group"
+                className={`group ${index === 2 ? 'hidden lg:block' : ''}`}
               >
                 <Link to={`/portfolio/${project.id}`}>
-                  <div className="aspect-[4/5] overflow-hidden bg-brand-border">
+                  <div className="aspect-[4/3] overflow-hidden bg-brand-border md:aspect-[4/5]">
                     <img
                       src={project.image}
                       alt={`${project.title}, portofolio arsitek rumah mewah Ilalang Architect`}
@@ -394,7 +394,7 @@ export default function LuxuryHouseArchitect() {
                   <div className="mt-5 flex items-start justify-between gap-4">
                     <div>
                       <h3 className="text-xl font-medium transition-colors group-hover:text-brand-earth">{project.title}</h3>
-                      <p className="mt-2 line-clamp-3 text-xs leading-6 text-brand-dark/55">{project.description}</p>
+                      <p className="mt-2 hidden line-clamp-3 text-xs leading-6 text-brand-dark/55 md:block">{project.description}</p>
                     </div>
                     <ArrowRight className="mt-1 h-5 w-5 shrink-0 transition-transform group-hover:translate-x-1" />
                   </div>
@@ -410,13 +410,13 @@ export default function LuxuryHouseArchitect() {
         </div>
       </section>
 
-      <section className="bg-white px-6 py-24 md:px-12 md:py-32">
+      <section className="bg-white px-6 py-16 md:px-12 md:py-32">
         <div className="mx-auto max-w-7xl">
           <div className="grid grid-cols-1 gap-16 lg:grid-cols-12">
             <div className="lg:col-span-4">
               <span className="mb-5 block text-[10px] font-bold uppercase tracking-[0.32em] text-brand-earth">Cara Kami Bekerja</span>
-              <h2 className="text-4xl font-medium leading-tight tracking-tight md:text-5xl">Jelas di setiap tahap.</h2>
-              <p className="mt-6 text-sm leading-7 text-brand-dark/60">Setiap keputusan penting dibahas dan dikembangkan bertahap agar desain tidak kehilangan arah saat diwujudkan.</p>
+              <h2 className="text-3xl font-medium leading-tight tracking-tight md:text-5xl">Jelas di setiap tahap.</h2>
+              <p className="mt-6 hidden text-sm leading-7 text-brand-dark/60 md:block">Setiap keputusan penting dibahas dan dikembangkan bertahap agar desain tidak kehilangan arah saat diwujudkan.</p>
             </div>
             <div className="lg:col-span-8">
               {process.map((item, index) => (
@@ -426,11 +426,11 @@ export default function LuxuryHouseArchitect() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.08 }}
-                  className="grid grid-cols-[48px_1fr] gap-5 border-t border-brand-border py-7 md:grid-cols-[72px_200px_1fr] md:gap-7"
+                  className="grid grid-cols-[40px_1fr] gap-4 border-t border-brand-border py-5 md:grid-cols-[72px_200px_1fr] md:gap-7 md:py-7"
                 >
                   <span className="text-sm font-bold text-brand-earth">{item.number}</span>
                   <h3 className="text-lg font-medium">{item.title}</h3>
-                  <p className="col-start-2 text-sm leading-7 text-brand-dark/55 md:col-start-3">{item.description}</p>
+                  <p className="col-start-2 hidden text-sm leading-7 text-brand-dark/55 md:col-start-3 md:block">{item.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -438,7 +438,7 @@ export default function LuxuryHouseArchitect() {
         </div>
       </section>
 
-      <section className="px-6 py-24 md:px-12 md:py-32">
+      <section className="hidden px-6 py-24 md:block md:px-12 md:py-32">
         <div className="mx-auto grid max-w-7xl grid-cols-1 gap-14 lg:grid-cols-12 lg:gap-20">
           <div className="lg:col-span-5">
             <span className="mb-5 block text-[10px] font-bold uppercase tracking-[0.32em] text-brand-earth">Kecocokan Proyek</span>
@@ -460,18 +460,18 @@ export default function LuxuryHouseArchitect() {
         </div>
       </section>
 
-      <section className="bg-brand-dark px-6 py-20 text-brand-beige md:px-12 md:py-24">
+      <section className="bg-brand-dark px-6 py-14 text-brand-beige md:px-12 md:py-24">
         <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-10 md:flex-row md:items-center">
           <div className="max-w-2xl">
             <p className="text-[10px] font-bold uppercase tracking-[0.32em] text-brand-earth">Punya Lahan atau Rencana Renovasi?</p>
-            <h2 className="mt-5 text-4xl font-medium leading-tight text-brand-beige md:text-5xl">Ceritakan rumah yang ingin Anda bangun.</h2>
+            <h2 className="mt-5 text-3xl font-medium leading-tight text-brand-beige md:text-5xl">Ceritakan rumah yang ingin Anda bangun.</h2>
             <p className="mt-5 text-sm leading-7 text-brand-beige/55">Mulai dari lokasi, ukuran lahan, kebutuhan ruang, dan kisaran anggaran. Tim kami akan membantu memetakan langkah awalnya.</p>
           </div>
           <WhatsAppCta position="mid_page" inverse />
         </div>
       </section>
 
-      <section className="bg-white px-6 py-24 md:px-12 md:py-32">
+      <section className="bg-white px-6 py-16 md:px-12 md:py-32">
         <div className="mx-auto grid max-w-7xl grid-cols-1 gap-14 lg:grid-cols-12 lg:gap-20">
           <div className="lg:col-span-5">
             <span className="mb-5 block text-[10px] font-bold uppercase tracking-[0.32em] text-brand-earth">Pertanyaan Umum</span>
@@ -482,8 +482,8 @@ export default function LuxuryHouseArchitect() {
             </div>
           </div>
           <div className="lg:col-span-7">
-            {faqs.map((faq) => (
-              <details key={faq.question} className="group border-t border-brand-border py-6 last:border-b">
+            {faqs.map((faq, index) => (
+              <details key={faq.question} className={`group border-t border-brand-border py-5 last:border-b md:py-6 ${index > 2 ? 'hidden md:block' : ''}`}>
                 <summary className="flex cursor-pointer list-none items-center justify-between gap-6 text-left text-lg font-medium marker:content-none">
                   {faq.question}
                   <span className="text-2xl font-light text-brand-earth transition-transform group-open:rotate-45">+</span>
@@ -495,11 +495,11 @@ export default function LuxuryHouseArchitect() {
         </div>
       </section>
 
-      <section className="px-6 py-24 text-center md:px-12 md:py-32">
+      <section className="px-6 py-12 text-center md:px-12 md:py-32">
         <div className="mx-auto max-w-4xl">
           <span className="mb-5 block text-[10px] font-bold uppercase tracking-[0.32em] text-brand-earth">Mulai dari Percakapan</span>
-          <h2 className="text-4xl font-medium leading-tight tracking-tight md:text-6xl">Rumah yang tepat dimulai dari brief yang dipahami dengan baik.</h2>
-          <p className="mx-auto mt-6 max-w-2xl text-sm leading-7 text-brand-dark/60">Klik WhatsApp untuk konsultasi awal. Ceritakan lokasi, luas lahan, kebutuhan ruang, dan gambaran rumah yang Anda inginkan.</p>
+          <h2 className="text-3xl font-medium leading-tight tracking-tight md:text-6xl">Rumah yang tepat dimulai dari brief yang dipahami dengan baik.</h2>
+          <p className="mx-auto mt-6 hidden max-w-2xl text-sm leading-7 text-brand-dark/60 md:block">Klik WhatsApp untuk konsultasi awal. Ceritakan lokasi, luas lahan, kebutuhan ruang, dan gambaran rumah yang Anda inginkan.</p>
           <div className="mt-10">
             <WhatsAppCta position="final" />
           </div>
