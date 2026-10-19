@@ -165,6 +165,11 @@ const landingSchemas = [
 function trackWhatsAppClick(position: string) {
   const browserWindow = window as Window & {
     dataLayer?: Array<Record<string, unknown>>;
+    gtag?: (
+      command: 'event',
+      eventName: 'conversion',
+      parameters: { send_to: string },
+    ) => void;
   };
 
   browserWindow.dataLayer?.push({
@@ -172,6 +177,10 @@ function trackWhatsAppClick(position: string) {
     lead_method: 'whatsapp',
     landing_page: 'arsitek_rumah_mewah',
     cta_position: position,
+  });
+
+  browserWindow.gtag?.('event', 'conversion', {
+    send_to: 'AW-17725475846/cahoCNq-uKIdEIaYlYRC',
   });
 }
 
