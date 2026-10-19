@@ -1,10 +1,22 @@
 import { motion } from 'motion/react';
 import SectionHeading from '../components/ui/SectionHeading';
 import Team from '../components/about/Team';
+import Seo, { breadcrumbSchema } from '../components/seo/Seo';
+
+const aboutSchema = breadcrumbSchema([
+  { name: 'Beranda', path: '/' },
+  { name: 'Tentang', path: '/about' },
+]);
 
 export default function About() {
   return (
     <div className="pb-24">
+      <Seo
+        title="Tentang Ilalang Architect | Studio Arsitek Malang"
+        description="Kenali Ilalang Architect, studio arsitektur berbasis di Malang yang merancang ruang berkarakter melalui cahaya alami, material, dan fungsi."
+        path="/about"
+        structuredData={aboutSchema}
+      />
       <section className="px-6 md:px-12 mb-32">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
           <div className="lg:col-span-12 xl:col-span-6">
@@ -12,6 +24,7 @@ export default function About() {
               subtitle="The Studio" 
               title="Architecture is the Art of Meaningful Living" 
               className="mb-8"
+              level="h1"
             />
             <div className="space-y-6 text-lg text-brand-dark/70 leading-relaxed max-w-xl">
               <p>

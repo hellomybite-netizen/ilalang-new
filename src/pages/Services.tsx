@@ -2,6 +2,12 @@ import { motion } from 'motion/react';
 import SectionHeading from '../components/ui/SectionHeading';
 import { Ruler, Pencil, Hammer, Brush } from 'lucide-react';
 import CostCalculator from '../components/services/CostCalculator';
+import Seo, { breadcrumbSchema } from '../components/seo/Seo';
+
+const servicesSchema = breadcrumbSchema([
+  { name: 'Beranda', path: '/' },
+  { name: 'Layanan', path: '/services' },
+]);
 
 const services = [
   {
@@ -40,11 +46,18 @@ const workflow = [
 export default function Services() {
   return (
     <div className="pb-24">
+      <Seo
+        title="Jasa Arsitek, Interior & Design Build Malang | Ilalang"
+        description="Layanan desain arsitektur, interior, design & build, dan branding ruang di Malang. Perencanaan transparan dari konsep hingga pelaksanaan proyek."
+        path="/services"
+        structuredData={servicesSchema}
+      />
       <section className="px-6 md:px-12 mb-24">
         <div className="max-w-7xl mx-auto">
           <SectionHeading 
             subtitle="Expertise" 
             title="Our Professional Services" 
+            level="h1"
           />
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

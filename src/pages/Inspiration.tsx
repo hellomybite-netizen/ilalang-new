@@ -3,14 +3,27 @@ import { Link } from 'react-router-dom';
 import SectionHeading from '../components/ui/SectionHeading';
 import { ArrowRight, Clock } from 'lucide-react';
 import { articles } from '../data/articles';
+import Seo, { breadcrumbSchema } from '../components/seo/Seo';
+
+const inspirationSchema = breadcrumbSchema([
+  { name: 'Beranda', path: '/' },
+  { name: 'Inspirasi', path: '/inspiration' },
+]);
 
 export default function Inspiration() {
   return (
     <div className="pb-24 px-6 md:px-12">
+      <Seo
+        title="Inspirasi Arsitektur & Interior | Ilalang Architect"
+        description="Baca panduan arsitektur tropis, pemilihan material, desain interior, dan persiapan proyek bangunan dari tim Ilalang Architect."
+        path="/inspiration"
+        structuredData={inspirationSchema}
+      />
       <div className="max-w-7xl mx-auto">
         <SectionHeading 
           subtitle="Journal & Insights" 
           title="Architectural Inspiration" 
+            level="h1"
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">

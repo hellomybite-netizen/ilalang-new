@@ -5,6 +5,12 @@ import SectionHeading from '../components/ui/SectionHeading';
 import { cn } from '@/src/lib/utils';
 import { ArrowUpRight } from 'lucide-react';
 import { projects, categories } from '../data/projects';
+import Seo, { breadcrumbSchema } from '../components/seo/Seo';
+
+const portfolioSchema = breadcrumbSchema([
+  { name: 'Beranda', path: '/' },
+  { name: 'Portofolio', path: '/portfolio' },
+]);
 
 export default function Portfolio() {
   const [activeCategory, setActiveCategory] = useState('All');
@@ -15,12 +21,19 @@ export default function Portfolio() {
 
   return (
     <div className="pb-24 px-6 md:px-12">
+      <Seo
+        title="Portofolio Arsitek Malang | Ilalang Architect"
+        description="Jelajahi portofolio Ilalang Architect untuk proyek rumah, sekolah, fasilitas komersial, olahraga, hunian, dan bangunan publik di berbagai kota."
+        path="/portfolio"
+        structuredData={portfolioSchema}
+      />
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
           <SectionHeading 
             subtitle="Archive & Exploration" 
             title="Portfolio Collection" 
             className="mb-0"
+            level="h1"
           />
           
           {/* Filters */}

@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, Clock } from 'lucide-react';
 import { articles } from '../data/articles';
+import Seo, { breadcrumbSchema } from '../components/seo/Seo';
 
 export default function ArticleDetail() {
   const { id } = useParams();
@@ -9,24 +10,17 @@ export default function ArticleDetail() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    if (article) {
-      document.title = `${article.title} | Ilalang Architect`;
-      let meta = document.querySelector('meta[name="description"]');
-      if (!meta) {
-        meta = document.createElement('meta');
-        meta.setAttribute('name', 'description');
-        document.head.appendChild(meta);
-      }
-      meta.setAttribute('content', article.metaDescription);
-    }
-    return () => {
-      document.title = 'Ilalang Architect | Better Design, Better Value';
-    };
-  }, [id, article]);
+  }, [id]);
 
   if (!article) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center bg-brand-beige">
+        <Seo
+          title="Artikel Tidak Ditemukan | Ilalang Architect"
+          description="Artikel yang Anda cari tidak tersedia. Jelajahi inspirasi arsitektur dan interior dari Ilalang Architect."
+          path={`/inspiration/${id ?? ''}`}
+          robots="noindex,follow"
+        />
         <h1 className="text-4xl font-display mb-4">Article Not Found</h1>
         <Link to="/inspiration" className="text-brand-earth flex items-center gap-2 hover:underline">
           <ArrowLeft className="w-4 h-4" /> Back to Inspiration
@@ -35,8 +29,39 @@ export default function ArticleDetail() {
     );
   }
 
+  const articlePath = `/inspiration/${article.id}`;
+  const articleUrl = `https://ilalang.id${articlePath}`;
+  const articleSchemas = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BlogPosting',
+      headline: article.title,
+      description: article.metaDescription,
+      image: article.image,
+      datePublished: article.datePublished,
+      dateModified: article.datePublished,
+      inLanguage: 'id-ID',
+      mainEntityOfPage: articleUrl,
+      author: { '@id': 'https://ilalang.id/#organization' },
+      publisher: { '@id': 'https://ilalang.id/#organization' },
+    },
+    breadcrumbSchema([
+      { name: 'Beranda', path: '/' },
+      { name: 'Inspirasi', path: '/inspiration' },
+      { name: article.title, path: articlePath },
+    ]),
+  ];
+
   return (
     <div className="bg-brand-beige min-h-screen pt-24 pb-24">
+      <Seo
+        title={`${article.title} | Ilalang Architect`}
+        description={article.metaDescription}
+        path={articlePath}
+        image={article.image}
+        type="article"
+        structuredData={articleSchemas}
+      />
       <div className="max-w-3xl mx-auto px-6 md:px-12">
         <Link to="/inspiration" className="inline-flex items-center gap-2 text-[10px] uppercase tracking-widest font-bold opacity-60 hover:opacity-100 hover:text-brand-earth mb-12 transition-all">
           <ArrowLeft className="w-4 h-4" /> Back to Inspiration
@@ -46,7 +71,7 @@ export default function ArticleDetail() {
           <div className="flex items-center gap-4 text-[10px] uppercase tracking-widest font-bold text-brand-earth mb-4">
             <span>{article.category}</span>
             <span className="w-1 h-1 bg-brand-earth/30 rounded-full" />
-            <time className="flex items-center gap-1 opacity-60">{article.date}</time>
+            <time dateTime={article.datePublished} className="flex items-center gap-1 opacity-60">{article.date}</time>
             <span className="w-1 h-1 bg-brand-earth/30 rounded-full" />
             <div className="flex items-center gap-1 opacity-60">
               <Clock className="w-3 h-3" />

@@ -2,6 +2,7 @@ import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import { projects } from '../data/projects';
 import { useEffect } from 'react';
+import Seo, { breadcrumbSchema } from '../components/seo/Seo';
 
 export default function ProjectDetail() {
   const { id } = useParams();
@@ -14,6 +15,12 @@ export default function ProjectDetail() {
   if (!project) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center bg-brand-beige">
+        <Seo
+          title="Proyek Tidak Ditemukan | Ilalang Architect"
+          description="Halaman proyek yang Anda cari tidak tersedia. Jelajahi portofolio Ilalang Architect lainnya."
+          path={`/portfolio/${id ?? ''}`}
+          robots="noindex,follow"
+        />
         <h1 className="text-4xl font-display mb-4">Project Not Found</h1>
         <Link to="/portfolio" className="text-brand-earth flex items-center gap-2 hover:underline">
           <ArrowLeft className="w-4 h-4" /> Back to Portfolio
@@ -22,8 +29,38 @@ export default function ProjectDetail() {
     );
   }
 
+  const projectPath = `/portfolio/${project.id}`;
+  const projectUrl = `https://ilalang.id${projectPath}`;
+  const projectImage = project.image.startsWith('http')
+    ? project.image
+    : `https://ilalang.id${project.image}`;
+  const projectSchemas = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'CreativeWork',
+      name: project.title,
+      description: project.description,
+      image: projectImage,
+      url: projectUrl,
+      inLanguage: 'id-ID',
+      creator: { '@id': 'https://ilalang.id/#organization' },
+    },
+    breadcrumbSchema([
+      { name: 'Beranda', path: '/' },
+      { name: 'Portofolio', path: '/portfolio' },
+      { name: project.title, path: projectPath },
+    ]),
+  ];
+
   return (
     <div className="bg-brand-beige min-h-screen pt-24 pb-24">
+      <Seo
+        title={`${project.title} | Portofolio Ilalang Architect`}
+        description={project.description ?? `Lihat detail proyek ${project.title} dalam portofolio Ilalang Architect.`}
+        path={projectPath}
+        image={project.image}
+        structuredData={projectSchemas}
+      />
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Back Button */}
         <Link to="/portfolio" className="inline-flex items-center gap-2 text-[10px] uppercase tracking-widest font-bold opacity-60 hover:opacity-100 hover:text-brand-earth mb-12 transition-all">

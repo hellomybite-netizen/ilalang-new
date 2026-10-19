@@ -14,6 +14,7 @@ export interface Article {
   metaDescription: string;
   image: string;
   date: string;
+  datePublished: string;
   readTime: string;
   content: ArticleBlock[];
 }
@@ -27,6 +28,7 @@ export const articles: Article[] = [
     metaDescription: "Simak tren arsitektur tropis modern 2026 di Indonesia: ventilasi silang, material alami, dan desain hemat energi yang cocok untuk iklim tropis.",
     image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=2069",
     date: "15 Jan 2026",
+    datePublished: "2026-01-15",
     readTime: "7 min read",
     content: [
       {
@@ -93,6 +95,7 @@ export const articles: Article[] = [
     metaDescription: "Bingung memilih arsitek untuk membangun rumah? Simak 7 hal penting sebelum menentukan jasa arsitek yang tepat untuk proyek Anda.",
     image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&q=80&w=2070",
     date: "22 Jan 2026",
+    datePublished: "2026-01-22",
     readTime: "6 min read",
     content: [
       {
@@ -175,6 +178,7 @@ export const articles: Article[] = [
     metaDescription: "Panduan memilih material bangunan tahan iklim tropis Indonesia: dari batu alam, kayu, hingga beton ekspos yang awet dan estetis.",
     image: "https://images.unsplash.com/photo-1531835551805-16d864c8d311?auto=format&fit=crop&q=80&w=2069",
     date: "2 Feb 2026",
+    datePublished: "2026-02-02",
     readTime: "8 min read",
     content: [
       {

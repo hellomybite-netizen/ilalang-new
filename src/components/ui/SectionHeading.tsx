@@ -6,14 +6,18 @@ interface SectionHeadingProps {
   subtitle?: string;
   className?: string;
   centered?: boolean;
+  level?: 'h1' | 'h2';
 }
 
 export default function SectionHeading({ 
   title, 
   subtitle, 
   className, 
-  centered = false 
+  centered = false,
+  level = 'h2',
 }: SectionHeadingProps) {
+  const Heading = level === 'h1' ? motion.h1 : motion.h2;
+
   return (
     <div className={cn(
       'mb-12 md:mb-20',
@@ -30,7 +34,7 @@ export default function SectionHeading({
           {subtitle}
         </motion.span>
       )}
-      <motion.h2
+      <Heading
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -38,7 +42,7 @@ export default function SectionHeading({
         className="text-4xl md:text-5xl font-display font-medium tracking-tighter"
       >
         {title}
-      </motion.h2>
+      </Heading>
     </div>
   );
 }

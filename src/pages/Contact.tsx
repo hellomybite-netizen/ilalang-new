@@ -1,14 +1,30 @@
 import { motion } from 'motion/react';
 import SectionHeading from '../components/ui/SectionHeading';
 import { Mail, Phone, MapPin, Send, Instagram } from 'lucide-react';
+import Seo, { breadcrumbSchema, organizationSchema } from '../components/seo/Seo';
+
+const contactSchemas = [
+  organizationSchema,
+  breadcrumbSchema([
+    { name: 'Beranda', path: '/' },
+    { name: 'Kontak', path: '/contact' },
+  ]),
+];
 
 export default function Contact() {
   return (
     <div className="pb-24 px-6 md:px-12">
+      <Seo
+        title="Konsultasi Jasa Arsitek Malang | Ilalang Architect"
+        description="Konsultasikan proyek rumah, interior, bangunan komersial, atau design & build bersama Ilalang Architect di Malang. Hubungi tim kami sekarang."
+        path="/contact"
+        structuredData={contactSchemas}
+      />
       <div className="max-w-7xl mx-auto">
         <SectionHeading 
           subtitle="Get In Touch" 
           title="Start Your Journey" 
+          level="h1"
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-20">
